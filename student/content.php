@@ -15,6 +15,7 @@ if(isset($_GET['page'])){
             include "module/dashboard/dashboard.php";
             break;
         
+
         //Materi
         case 'belajar':
             include "module/belajar/belajar.php";
@@ -43,7 +44,8 @@ if(isset($_GET['page'])){
         case 'info':
             include "module/belajar/materi-info.php";
             break;
-			
+            
+            
 		//Pencarian
 		case 'pg1':
             include "module/belajar/pencarian-guru1.php";

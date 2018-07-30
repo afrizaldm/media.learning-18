@@ -34,7 +34,7 @@
                                                 <th><strong>File Materi</strong></th>
                                                 <th><strong>File Tugas</strong></th>
                                                 <th><strong>File Video (Mp4)</strong></th>
-                                                <th><strong>Pilhan</strong></th>
+                                                <th style="width:80.00px"><strong>Pilhan</strong></th>
                                             </tr>
                                         </thead>
                                         <tbody style="font-size: 12px;">
@@ -54,6 +54,7 @@
                                                 $fmateri   = $row['file_materi'];
                                                 $ftugas    = $row['file_tugas'];
                                                 $fvideo    = $row['file_video'];
+                                                $status    = $row['status'];
                                             ?>
                                             <tr>
                                                 <td><?php echo $no ?></td>
@@ -65,18 +66,33 @@
                                                 <td><a href src="\files\materi"> <?php echo $fmateri ?></a></td>
                                                 <td><a href src="../files/tugas"> <?php echo $ftugas ?></a></td>
                                                 <td><a href src="../files/video"> <?php echo $fvideo ?></a></td>
+                                                <td class="btn-table text-center">
                                                 <?php 
-                                                echo "<td class='btn-table text-center'>"
-                                                      . "<a href='#modalEdit' data-toggle='modal' data-id=".$id_materi.">"
+                                                echo "<a href='#modalEdit' data-toggle='modal' data-id=".$id_materi.">"
                                                           ."<button type='button' class='btn btn-xs btn-success btn-item' title='Edit'>"
                                                               ."<i class='fa fa-edit'></i></button>"
                                                       ."</a>"
                                                       ." <a href=\"hapus_materi.php?id=".$id_materi."\">"
                                                           ."<button type=\"button\" class=\"btn btn-xs btn-danger btn-item\" title=\"Delete\" onclick=\"return confirm('Apa Anda yakin ingin menghapus data ini?');\">"
                                                               ."<i class=\"fa fa-times\"></i></button>"
-                                                      ."</a>"
-                                                  ."</td>"
+                                                      ."</a>";
+                                                    if($status == "ACTIVE"){
                                                 ?>
+                                                    <a href="set_aktif_materi.php?status=1&id=<?php echo $id_materi ?>">
+                                                        <button type="button" class="btn btn-xs btn-danger btn-item" title="Non Aktifkan" onclick="return confirm('Apa Anda yakin ingin menonaktifkan data ini?');">
+                                                        <i class="fa fa-power-off"></i></button>
+                                                    </a>
+                                                <?php
+                                                    }else{
+                                                ?>
+                                                    <a href="set_aktif_materi.php?status=0&id=<?php echo $id_materi ?>">
+                                                        <button type="button" class="btn btn-xs btn-success btn-item" title="Aktifkan" onclick="return confirm('Apa Anda yakin ingin mengaktifkan data ini?');">
+                                                        <i class="fa fa-power-off"></i></button>
+                                                    </a>
+                                                <?php
+                                                    }
+                                                ?>
+                                                </td>
                                             </tr>
                                             <?php $no++; } ?>
                                         </tbody>

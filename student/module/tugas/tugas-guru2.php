@@ -31,6 +31,7 @@
                         $nama_guru    = $row['first_name'];
                         $nama_tugas   = $row['nama_tugas'];
                         $ftugas       = $row['file_tugas'];
+                        $status       = $row['status'];
                 ?>
                     <center>
                         <!-- /.col-md-4 -->
@@ -43,8 +44,18 @@
                                         <p class="card-text" style="text-align: justify;"><?php echo $ftugas ?></p>
                                     </div>
                                 </div>
-                                <div class="card-footer" style="margin: 10px;">
-                                    <a href="download.php?file=tugas/<?php echo $ftugas ?>" class="btn btn-primary">Download Tugas</a>
+                                <div class="card-footer" style="margin: 10px;">  
+                                    <?php
+                                        if($status == 'ACTIVE') {
+                                    ?>
+                                        <a href="download.php?file=tugas/<?php echo $ftugas ?>" class="btn btn-primary">Download Tugas</a>
+                                    <?php
+                                        }else{
+                                    ?>
+                                        <button id="<?php echo $id_materi ?>" class="btn btn-danger">Belum Aktif</button>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>

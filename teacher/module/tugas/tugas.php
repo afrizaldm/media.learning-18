@@ -48,6 +48,7 @@
                                                 $nm_tugas  = $row['nama_tugas'];
                                                 $tema      = $row['tema']; 
                                                 $ftugas    = $row['file_tugas'];
+                                                $status    = $row['status'];
                                             ?>
                                             <tr>
                                                 <td><?php echo $no ?></td>
@@ -56,14 +57,29 @@
                                                 <td><?php echo $tema ?></td>
                                                 <td><a href src="../files/tugas"> <?php echo $ftugas ?></a></td>
                                                 <td><?php echo $userid ?></td>
+                                                <td class='btn-table text-center'>
                                                 <?php 
-                                                echo "<td class='btn-table text-center'>"
-                                                      ." <a href=\"hapus_tugas.php?id=".$id_tugas."\">"
+                                                echo " <a href=\"hapus_tugas.php?id=".$id_tugas."\">"
                                                           ."<button type=\"button\" class=\"btn btn-xs btn-danger btn-item\" title=\"Delete\" onclick=\"return confirm('Apa Anda yakin ingin menghapus data ini?');\">"
                                                               ."<i class=\"fa fa-times\"></i> Hapus</button>"
-                                                      ."</a>"
-                                                  ."</td>"
-                                                ?>
+                                                      ."</a>";
+                                                    if($status == "ACTIVE"){
+                                                    ?>
+                                                        <a href="set_aktif_tugas.php?status=1&id=<?php echo $id_tugas ?>">
+                                                            <button type="button" class="btn btn-xs btn-danger btn-item" title="Non Aktifkan" onclick="return confirm('Apa Anda yakin ingin menonaktifkan data ini?');">
+                                                            <i class="fa fa-power-off"></i></button>
+                                                        </a>
+                                                    <?php
+                                                        }else{
+                                                    ?>
+                                                        <a href="set_aktif_tugas.php?status=0&id=<?php echo $id_tugas ?>">
+                                                            <button type="button" class="btn btn-xs btn-success btn-item" title="Aktifkan" onclick="return confirm('Apa Anda yakin ingin mengaktifkan data ini?');">
+                                                            <i class="fa fa-power-off"></i></button>
+                                                        </a>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                </td>
                                             </tr>
                                             <?php $no++; } ?>
                                         </tbody>

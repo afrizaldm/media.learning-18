@@ -43,6 +43,7 @@
                         $fmateri   = $row['file_materi'];
                         $ftugas    = $row['file_tugas'];
                         $fvideo    = $row['file_video'];
+                        $status    = $row['status'];
                 ?>
                     <center>
                         <!-- /.col-md-4 -->
@@ -56,7 +57,17 @@
                                     </div>
                                 </div>
                                 <div class="card-footer" style="margin: 10px;">
-                                    <a href="<?php echo $link ?>&id=<?php echo $id_materi ?>" class="btn btn-primary">More Info</a>
+                                    <?php
+                                        if($status == 'AKTIVE') {
+                                    ?>
+                                        <a href="<?php echo $link ?>&id=<?php echo $id_materi ?>" class="btn btn-primary">More Info</a>
+                                    <?php
+                                        }else{
+                                    ?>
+                                        <button id="<?php echo $id_materi ?>" class="btn btn-danger">Belum Aktif</button>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>
