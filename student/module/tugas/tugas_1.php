@@ -47,18 +47,19 @@
                                             <td>s</td>
                                             <td>s</td>
                                             <td>s</td>
+                                            <td class="btn-table text-center">
                                             <?php 
-                                            echo "<td class='btn-table text-center'>"
-                                                  . "<a href='#modalEdit' data-toggle='modal' data-id=".$row['id'].">"
+                                            echo "<a href='#modalEdit' data-toggle='modal' data-id=".$row['id'].">"
                                                       ."<button type='button' class='btn btn-xs btn-success btn-item' title='Edit'>"
                                                           ."<i class='fa fa-edit'></i> Edit</button>"
                                                   ."</a>"
                                                   ." <a href=\"aksi_hapusItems.php?id=".$row['id']."\">"
                                                       ."<button type=\"button\" class=\"btn btn-xs btn-danger btn-item\" title=\"Delete\" onclick=\"return confirm('Apa Anda yakin ingin menghapus data ini?');\">"
                                                           ."<i class=\"fa fa-times\"></i> Delete</button>"
-                                                  ."</a>"
-                                              ."</td>"
+                                                  ."</a>";
                                             ?>
+                                            
+                                            </td>
                                         </tr>
                                         <?php
                                         include '../config/connection.php';

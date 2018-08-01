@@ -51,7 +51,7 @@ if( (in_array($file_ext, $allowed_ext) === true) || (in_array($tugas_ext, $allow
         $lokasi_v = '../files/video/'.$final_video;
         move_uploaded_file($video_tmp, $lokasi_v);
         
-        $query  = "INSERT INTO media VALUES('null','$dguru','$tema','$nama','$materi','$final_file','$final_tugas','$final_video')";
+        $query  = "INSERT INTO media VALUES('null','$dguru','$tema','$nama','$materi','$final_file','$final_tugas','$final_video', 'NOT ACTIVE')";
         $input  = mysqli_query($con, $query);
         
         if($input){

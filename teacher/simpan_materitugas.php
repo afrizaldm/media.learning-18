@@ -34,7 +34,7 @@ if( in_array($tugas_ext, $allowed_tug) === true ){
        
         
         
-        $query  = "INSERT INTO tugas VALUES('null','$nama','Fisika','$final_tugas','$dguru')";
+        $query  = "INSERT INTO tugas VALUES('null','$nama','Fisika','$final_tugas','$dguru', 'NOT ACTIVE')";
         $input  = mysqli_query($con, $query);
         
         if($input){

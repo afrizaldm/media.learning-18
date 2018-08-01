@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="card-footer" style="margin: 10px;">
                                 <?php
-                                        if($status == 'AKTIVE') {
+                                        if($status == 'ACTIVE') {
                                     ?>
                                         <a href="<?php echo $link ?>&id=<?php echo $id_materi ?>" class="btn btn-primary">More Info</a>
                                     <?php

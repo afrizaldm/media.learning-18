@@ -34,7 +34,7 @@ if( in_array($tugas_ext, $allowed_tug) === true ){
        
         
         
-        $query  = "INSERT INTO tugas VALUES('null','$nama','$tema','$final_tugas','$dguru')";
+        $query  = "INSERT INTO tugas VALUES('null','$nama','$tema','$final_tugas','$dguru', 'NOT ACTIVE')";
         $input  = mysqli_query($con, $query);
         
         if($input){
@@ -53,7 +53,6 @@ if( in_array($tugas_ext, $allowed_tug) === true ){
 else{
     echo "<div>'Error tingkat 2'</div>";
 }
-
 
 
 ?>

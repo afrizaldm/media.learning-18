@@ -8,7 +8,7 @@
         <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
     </head>
-    <body style="background: url(file/images/back2.jpg); background-position: ;">
+    <body style="background: url(file/images/blackboard.jpg); background-size:cover ">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">

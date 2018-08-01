@@ -19,6 +19,52 @@ session_start();
         <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="../plugin/dataTables/dataTables.bootstrap.css" type="text/css">
         <!-- jQuery -->
+        <style>
+        .logo {
+			margin-top: 36px;
+			width: 230px;
+		}
+
+		.animate-bounce {
+			animation-name: bounce;
+			animation-duration: 1.2s;
+    		animation-delay: 0.5s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes bounce {
+			from,
+			20%,
+			53%,
+			80%,
+			to {
+				-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+				animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+
+			40%,
+			43% {
+				-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+				animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+				-webkit-transform: translate3d(0, -30px, 0);
+				transform: translate3d(0, -30px, 0);
+			}
+
+			70% {
+				-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+				animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+				-webkit-transform: translate3d(0, -15px, 0);
+				transform: translate3d(0, -15px, 0);
+			}
+
+			90% {
+				-webkit-transform: translate3d(0, -4px, 0);
+				transform: translate3d(0, -4px, 0);
+			}
+		}
+        </style>
         <script src="../js/jquery-3.1.1.min.js"></script>
     </head>
     
