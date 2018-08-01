@@ -9,7 +9,7 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <style>
             .navbar {
-                opacity: 0.9;
+                opacity: 0.8;
             }
         </style>
     </head>
