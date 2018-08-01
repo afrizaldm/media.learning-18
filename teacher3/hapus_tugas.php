@@ -10,7 +10,7 @@ if($file_tugas)
     $rows = mysqli_fetch_array($file_tugas);
     $hapus = "DELETE FROM tugas WHERE id_tugas='$_GET[id]'";
     $status = mysqli_query($con, $hapus);
-    $file = '../files/tugas/'.$rows[0];
+    $file = '../../files/tugas/'.$rows[0];
     if($hapus)
     {
         if (file_exists($file)) {

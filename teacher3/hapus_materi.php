@@ -9,9 +9,9 @@ if($file)
 {
     
     $rows = mysqli_fetch_array($file);
-    $file_materi = '../files/materi/'.$rows["file_materi"];
-    $file_tugas = '../files/tugas/'.$rows["file_tugas"];
-    $file_video = '../files/video/'.$rows["file_video"];
+    $file_materi = '../../files/materi/'.$rows["file_materi"];
+    $file_tugas = '../../files/tugas/'.$rows["file_tugas"];
+    $file_video = '../../files/video/'.$rows["file_video"];
 
     $hapus = "DELETE FROM media WHERE id_materi='$_GET[id]'";
     $status = mysqli_query($con, $hapus);

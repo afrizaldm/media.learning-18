@@ -50,7 +50,7 @@
                                                 <td><?php echo $no ?></td>
 
                                                 <td><?php echo $nm_tugas ?></td>
-                                                <td><a href src="../files/tugas"> <?php echo $ftugas ?></a></td>
+                                                <td><a href src="../../files/tugas"> <?php echo $ftugas ?></a></td>
                                                 <td><?php echo $userid ?></td>
                                                 <?php 
                                                 echo "<td class='btn-table text-center'>"

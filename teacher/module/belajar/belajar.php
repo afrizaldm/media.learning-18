@@ -64,8 +64,8 @@
                                                 <td><?php echo $tema ?></td>
                                                 <td><?php echo $materi ?></td>
                                                 <td><a href src="\files\materi"> <?php echo $fmateri ?></a></td>
-                                                <td><a href src="../files/tugas"> <?php echo $ftugas ?></a></td>
-                                                <td><a href src="../files/video"> <?php echo $fvideo ?></a></td>
+                                                <td><a href src="../../files/tugas"> <?php echo $ftugas ?></a></td>
+                                                <td><a href src="../../files/video"> <?php echo $fvideo ?></a></td>
                                                 <td class="btn-table text-center">
                                                 <?php 
                                                 echo "<a href='#modalEdit' data-toggle='modal' data-id=".$id_materi.">"

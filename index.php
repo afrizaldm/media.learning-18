@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
         <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <style>
+            .navbar {
+                opacity: 0.9;
+            }
+        </style>
     </head>
     <body style="background: url(file/images/blackboard.jpg); background-size:cover ">
         <nav class="navbar navbar-default navbar-static-top">

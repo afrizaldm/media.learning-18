@@ -28,7 +28,7 @@ $tema           = $_POST['tema'];
 if( in_array($tugas_ext, $allowed_tug) === true ){
     if(  ($tugas_size < 6000000)   ){
         
-        $lokasi_t = '../files/jawaban/'.$final_tugas;
+        $lokasi_t = '../../files/jawaban/'.$final_tugas;
         move_uploaded_file($tugas_tmp, $lokasi_t);
        
         $query  = "INSERT INTO jawaban VALUES('null','$idmateri','$tema','$final_tugas','$dsiswa')";

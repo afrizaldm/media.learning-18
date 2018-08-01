@@ -29,7 +29,7 @@ if( in_array($tugas_ext, $allowed_tug) === true ){
         
      
         
-        $lokasi_t = '../files/tugas/'.$final_tugas;
+        $lokasi_t = '../../files/tugas/'.$final_tugas;
         move_uploaded_file($tugas_tmp, $lokasi_t);
        
         

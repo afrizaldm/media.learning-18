@@ -43,13 +43,13 @@ $dguru          = $_POST['idguru'];
 //     if( ($video_type == "video/mp4") || ($video_type == "video/mkv") || ($video_type == "video/3gp") || ($video_type == "video/flv") || ($video_type == "video/avi") || ($video_type == "video/swf") &&
 //             ($file_size < 6000000) && ($tugas_size < 6000000) && ($video_size < 60000000)  ){
         
-//         $lokasi = '../files/materi/'.$final_file;
+//         $lokasi = '../../files/materi/'.$final_file;
 //         move_uploaded_file($file_tmp, $lokasi);
         
-//         $lokasi_t = '../files/tugas/'.$final_tugas;
+//         $lokasi_t = '../../files/tugas/'.$final_tugas;
 //         move_uploaded_file($tugas_tmp, $lokasi_t);
        
-//         $lokasi_v = '../files/video/'.$final_video;
+//         $lokasi_v = '../../files/video/'.$final_video;
 //         move_uploaded_file($video_tmp, $lokasi_v);
         
         $query  = "UPDATE media set userid='$dguru', tema='Fisika', nama_materi='$nama', materi='$materi' where id_materi='$id' ";

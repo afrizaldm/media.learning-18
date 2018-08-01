@@ -42,13 +42,13 @@ $tema           = $_POST['tema'];
 if( (in_array($file_ext, $allowed_ext) === true) || (in_array($tugas_ext, $allowed_tug) === true) || (in_array($video_ext, $allowed_vid) === true) ){
     if( ($video_type == "video/mp4") || ($file_size < 6000000) || ($tugas_size < 6000000) || ($video_size < 60000000)  ){
         
-        $lokasi = '../files/materi/'.$final_file;
+        $lokasi = '../../files/materi/'.$final_file;
         move_uploaded_file($file_tmp, $lokasi);
         
-        $lokasi_t = '../files/tugas/'.$final_tugas;
+        $lokasi_t = '../../files/tugas/'.$final_tugas;
         move_uploaded_file($tugas_tmp, $lokasi_t);
        
-        $lokasi_v = '../files/video/'.$final_video;
+        $lokasi_v = '../../files/video/'.$final_video;
         move_uploaded_file($video_tmp, $lokasi_v);
         
         $query  = "INSERT INTO media VALUES('null','$dguru','$tema','$nama','$materi','$final_file','$final_tugas','$final_video', 'NOT ACTIVE')";

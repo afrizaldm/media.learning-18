@@ -55,7 +55,7 @@
 
                                                 <td><?php echo $nm_tugas ?></td>
                                                 <td><?php echo $tema ?></td>
-                                                <td><a href src="../files/tugas"> <?php echo $ftugas ?></a></td>
+                                                <td><a href src="../../files/tugas"> <?php echo $ftugas ?></a></td>
                                                 <td><?php echo $userid ?></td>
                                                 <td class='btn-table text-center'>
                                                 <?php 
