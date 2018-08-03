@@ -46,7 +46,7 @@
         }
     }
     else{
-        echo '<script language="javascript">alert("Username/E-mail dan Password tidak ditemukan!"); '
+        echo '<script language="javascript">alert("Username/E-mail dan Password tidak ditemukan! SELECT * FROM users WHERE (username="$username" AND password="$password"))'
         . 'document.location="./index.php";</script>';
     }
 
