@@ -17,11 +17,12 @@ session_start();
         <link rel="stylesheet" href="../css/startmin.css" type="text/css">
         <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="../plugin/dataTables/dataTables.bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="../css/mystyle.css" type="text/css">
         <!-- jQuery -->
         <script src="../js/jquery-3.1.1.min.js"></script>
     </head>
     
-    <body>
+    <body class="background">
         <div id="wrapper">
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

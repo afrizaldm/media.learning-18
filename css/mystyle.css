@@ -1,0 +1,13 @@
+.background {
+    background: url(../file/images/blackboard.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-transparent {
+    background: transparent;
+}
