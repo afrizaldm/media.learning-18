@@ -31,29 +31,29 @@
         $_SESSION['akses']  = $data['level'];
 
         if ($data['level'] == 'teacher'){
-            // $_SESSION['teacher'] = $username;
-            // echo '<script language="javascript">alert("Login as Teacher"); document.location="teacher/index.php";</script>';
-            // exit();
+            $_SESSION['teacher'] = $username;
+            echo '<script language="javascript">alert("Login as Teacher"); document.location="teacher/index.php";</script>';
+            exit();
         }
         else if($data['level'] == 'teacher3'){
-            // $_SESSION['teacher3'] = $username;
-            // echo '<script language="javascript">alert("Login as Teacher Tetra"); document.location="teacher3/index.php";</script>';
-            // exit();
+            $_SESSION['teacher3'] = $username;
+            echo '<script language="javascript">alert("Login as Teacher Tetra"); document.location="teacher3/index.php";</script>';
+            exit();
         }
         else {
-            // $_SESSION['student'] = $username;
-            // echo '<script language="javascript">alert("Login as Student"); document.location="student/index.php";</script>';
+            $_SESSION['student'] = $username;
+            echo '<script language="javascript">alert("Login as Student"); document.location="student/index.php";</script>';
         }
     }
     else{
-        // echo '<script language="javascript">alert("Username/E-mail dan Password tidak ditemukan!"); '
-        // . 'document.location="./index.php";</script>';
+        echo '<script language="javascript">alert("Username/E-mail dan Password tidak ditemukan!"); '
+        . 'document.location="./index.php";</script>';
     }
 
     if(!empty($error)){
-        // $_SESSION['error'] = $error;
-        // header('location: index.php');
-        // exit();
+        $_SESSION['error'] = $error;
+        header('location: index.php');
+        exit();
     }
     
 ?>
