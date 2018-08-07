@@ -1,6 +1,6 @@
 <?php
 //Tentukan folder file yang boleh di download
-$folder = "../files/";
+$folder = "../../files/";
 //Lalu cek menggunakan fungsi file_exist
 if (!file_exists($folder.$_GET['file'])){
     echo "<h1>Access Forbidden!</h1>"
