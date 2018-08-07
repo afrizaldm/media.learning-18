@@ -40,7 +40,7 @@ $tema           = $_POST['tema'];
 //$nama_video     = $_POST['nama_video'];
 
 if( (in_array($file_ext, $allowed_ext) === true) || (in_array($tugas_ext, $allowed_tug) === true) || (in_array($video_ext, $allowed_vid) === true) ){
-    if( ($video_type == "video/mp4") || ($file_size < 6000000) || ($tugas_size < 6000000) || ($video_size < 60000000)  ){
+    if( ($video_type == "video/mp4") || ($file_size < 6000000) || ($tugas_size < 6000000) || ($video_size < 600000000)  ){
         
         $lokasi = '../../files/materi/'.$final_file;
         move_uploaded_file($file_tmp, $lokasi);

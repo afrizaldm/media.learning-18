@@ -56,7 +56,7 @@
                             <div class="panel-body">
                                 <center>
                                     <video width="100%" height="auto" controls>
-                                        <source src="../../files/video/<?php echo $fvideo ?>" type="video/mp4" width="100%" height="auto"/>
+                                        <source src="../video.php?file=<?php echo $fvideo; ?>" type="video/mp4" width="100%" height="auto"/>
                                     </video>
                                 </center>
                             </div>
