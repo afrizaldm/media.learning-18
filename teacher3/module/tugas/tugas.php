@@ -38,7 +38,7 @@
                                             include '../config/connection.php';
                                             $qguru = $_SESSION['nama1'];
                                             $no = 1;
-                                            $query = "SELECT * FROM v_tugas where first_name='$qguru'";
+                                            $query = "SELECT tugas.id_tugas AS id_tugas , `users`.`first_name` AS `first_name`,`tugas`.`nama_tugas` AS `nama_tugas`,`tugas`.`file_tugas` AS `file_tugas`, tugas.tema AS tema, tugas.`status` from (`tugas` join `users`) WHERE (`users`.`userid` = `tugas`.`userid`) AND `users`.`first_name` ='$qguru'";
 
                                             $hasil  = mysqli_query($con, $query);
                                             while($row = mysqli_fetch_array($hasil)){
